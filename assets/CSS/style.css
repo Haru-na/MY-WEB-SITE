@@ -36,7 +36,7 @@ a {
     text-decoration: none;
     color: white;
 }
-
+/*--about--*/
 section {
     padding: 0 70px;
     padding-top: 100px;
@@ -47,17 +47,20 @@ h1 {
     font-family: 'Roboto', sans-serif;
     margin-bottom: 10px;
 }
-h2 {
+#about h2 {
     font-size: 70px;
     font-family: 'Parisienne', cursive;
     margin-top: 10px;
 
 
 }
-p {
+#about p {
     font-size: 18px;
     margin: auto;
     font-family: 'Noto Sans TC', sans-serif;
+}
+#about .contents-left img {
+    height: 300px;
 }
 .about-contents {
     display: flex;
@@ -66,20 +69,20 @@ p {
     margin-top: 0px;
     margin-bottom: 70px;
 }
-.contents-left img {
-    height: 300px;
-}
-.contents-right {
+/*.contents-right {
     margin-left: 50px;
+}*/
+/*--workout--*/
+#workout h2 {
+    margin-bottom: 0px;
+    font-size: 23px;
 }
-.contents-right h2 {
-    margin-bottom: 40px;
-}
-.contents-left p {
-    font-size: 20px;
+#workout p {
+    font-size: 18px;
+    padding-top: 10px;
     
 }
-.contents-right img {
+#workout img {
     height: 400px;
     margin-bottom: 20px;
 }
@@ -92,46 +95,35 @@ p {
 #workout {
     background-color: rgb(230, 208, 196);
 }
-.workout h2 {
-    font-size: 50px;
-    animation-name: bigger-font;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-delay: .5s;
-    animation-iteration-count: 2;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-}
-.contents-left h2 {
-    margin-bottom: 20px;
-}
+/*--merit--*/
 #merit {
-    background-color: white
-}
-/*.backbox {
-    height: 100vh;
-    width: 30%;
-    background-color: rgb(145, 210, 197);
-}*/
-.boxes {
-    margin-top: 70px;
-    margin-bottom: 30px;
+    background-image:url(../IMG/tow-tone_backcolor.jpg);
+    background-repeat:no-repeat;
+    margin-top: 0px;
+    margin-bottom: 0px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 .box {
+    height: 400px;
+    width: 400px;
     border: 1px solid rgb(237, 230, 223);
     margin: o 15px;
     padding: 20px 30px;
     margin-bottom: 30PX;
 }
 .box h2 {
+    font-size: 26px;
     text-align: center;
     margin-bottom: 20px;
     font-size: 32px;
 
 }
+.box p {
+    font-size: 18px;
+}
+/*--contact--*/
 #contact {
     /*margin-bottom: 200px;*/
     padding-bottom: 50px;
@@ -169,6 +161,7 @@ button {
 button:hover {
     background-color: rgb(230, 208, 196);
 }
+/*--footer--*/
 footer {
     text-align: center;
     padding: 25px;
