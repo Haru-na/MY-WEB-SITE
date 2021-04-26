@@ -22,16 +22,26 @@ header {
     padding: 20px 70px;
 }
 /*--header_left--*/
+.header-left h1 {
+    color: white;
+    padding-top: 10px;
+
+}
 .logo {
     height: 100px;
 }
 /*--header_right--*/
+.nav {
+    display: flex;
+
+}
+
 li {
     font-size: 15px;
-    float: left;
+    /* float: left; */
     margin-left: 50px;
     color: white;
-}
+} 
 a {
     text-decoration: none;
     color: white;
@@ -45,7 +55,7 @@ section {
 h1 {
     font-size: 38px;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 #about h2 {
     font-size: 70px;
@@ -72,6 +82,30 @@ h1 {
 /*.contents-right {
     margin-left: 50px;
 }*/
+/* galleries */
+#galleries {
+    height: 640px;
+}
+.wrap {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.galleries-contens {
+    display: flex;
+    animation: loop-slide 30s infinite linear 1s both;
+}
+@keyframes loop-slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  } 
+.contens-item {
+    text-align: center;
+}
 /*--workout--*/
 #workout h2 {
     margin-bottom: 0px;
@@ -101,6 +135,9 @@ h1 {
     background-repeat:no-repeat;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+.boxes {
+   
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -109,6 +146,7 @@ h1 {
     height: 400px;
     width: 400px;
     border: 1px solid rgb(237, 230, 223);
+    background-image:url(../IMG/shadow-leaf2.jpg);
     margin: o 15px;
     padding: 20px 30px;
     margin-bottom: 30PX;
@@ -122,6 +160,12 @@ h1 {
 }
 .box p {
     font-size: 18px;
+}
+/* blog */
+#blog {
+    height: 100vh;
+    width: 100vw;
+   
 }
 /*--contact--*/
 #contact {
@@ -137,7 +181,7 @@ h1 {
     margin-top: 70px;
 }
 input, textarea {
-    width: 40%;
+    width: 70%;
     font-size: 23px;
     margin-bottom: 18px;
     padding: 3px 12px;
@@ -146,7 +190,7 @@ input, textarea, button {
     border-radius: 5px;
 }
 textarea {
-    width: 30%;
+    width: 70%;
 }
 button {
     width: 140px;
@@ -169,4 +213,165 @@ footer {
 }
 footer p {
     color: white;
+}
+
+
+.hamburger, .btn {
+    display: none;
+}    
+
+
+@media screen and (max-width: 780px){
+    /* about */
+    /* #about {
+        background-color:rgb(230, 208, 196);
+    } */
+    #about h1 {
+        font-size: 35px;
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 10px;
+    }
+    #about h2 {
+        font-size: 40px;
+        font-family: 'Parisienne', cursive;
+        margin: 10px;
+
+    }
+    #about p {
+        font-size: 12px;
+        padding-bottom: 20px;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+    #about .contents-left img {
+        height: 200px;
+    }
+    .about-contents {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 0px;
+        margin-bottom: 70px;
+        padding: 0 20px;
+        
+    }
+    /* work out */
+    #workout p {
+        font-size: 12px;
+        margin-top: 20px;
+        
+    }
+    #workout img {
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    .workout-contents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 30px;
+    }
+    /* merit */
+    #merit {
+        background-image:url(../IMG/tow-tone_backcolor.jpg);
+        background-repeat:no-repeat;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .boxes {
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box {
+        height: 200px;
+        width: 300px;
+        border: 1px solid rgb(237, 230, 223);
+        margin: o 15px;
+        padding: 20px 30px;
+        margin-bottom: 30PX;
+    }
+    .box h2 {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 20px;
+        
+    
+    }
+    .box p {
+        font-size: 14px;
+    }
+
+    .img02 {
+        /* display: none; */
+        height: 400px; 
+        margin-top: 160px; 
+    }
+    .header-left > h1 {
+        margin-top: 100px;
+    }
+    .header-right {
+        /* margin-top: 250px; */
+    }
+    .nav {
+        /* display: none; */
+        flex-direction: column;;
+    }
+    .nav > li { 
+        width: 100px;
+        height: 40px;
+    } 
+    .nav {
+        display: none;  
+    } 
+    .btn {
+        display: block;
+        position: relative;
+        width: 35px;
+        height: 50px;
+        cursor: pointer;
+    }
+    .icon, .icon::before, .icon::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        height: 2px;
+        width: 35px;
+        background-color: white;
+        display: block;
+        content: '';
+        transition: all 1s;
+    } 
+    .icon::before {
+        top:-25px;
+    }
+    .icon::after {
+        top: 25px;
+    }
+
+    .hamburger:checked ~ .btn {
+        top: 200px;
+    }
+
+    .hamburger:checked ~ .btn .icon {
+        background-color:transparent;
+    }
+    .hamburger:checked ~ .btn .icon::before {
+        transform: rotate(-45deg);
+        top: 0;
+        /* display: none; */
+    }
+    .hamburger:checked ~ .btn .icon::after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .hamburger:checked ~ .nav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+    }
 }
